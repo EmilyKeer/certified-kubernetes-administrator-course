@@ -40,6 +40,9 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
   ```
   ![na](../../images/na.PNG)
   
+  
+ ** Important: put under spec of pod, not deployment**
+  
   ```
   apiVersion: v1
   kind: Pod
