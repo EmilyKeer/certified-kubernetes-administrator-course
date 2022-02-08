@@ -25,6 +25,11 @@ In this section, we will take a look at cluster roles
   $ $ kubectl api-resources --namespaced=false
   ```
   
+- To see api groups
+  ```
+  $ $ kubectl api-resources -o wide | grep xxx
+  ```
+  
   ![namespace1](../../images/namespace1.PNG)
   
 ## Cluster Roles and Cluster Role Bindings
