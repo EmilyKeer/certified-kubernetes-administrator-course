@@ -35,7 +35,7 @@ spec:
   usages:
   - client auth
 ```
-
+```
   $ cat jane.csr |base64 
   $ kubectl create -f jane.yaml
   ```
