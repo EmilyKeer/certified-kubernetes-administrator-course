@@ -21,7 +21,8 @@ In this section, we will take a look at how to manage certificates and certifica
   $ openssl req -new -key jane.key -subj "/CN=jane" -out jane.csr 
   ```
 - Sends the request to the administrator and the adminsitrator takes the key and creates a CSR object, with kind as "CertificateSigningRequest" and a encoded "jane.csr"
-  ```
+
+```
   apiVersion: certificates.k8s.io/v1
 kind: CertificateSigningRequest
 metadata:
@@ -33,7 +34,8 @@ spec:
   signerName: kubernetes.io/kube-apiserver-client
   usages:
   - client auth
-  ```
+```
+
   $ cat jane.csr |base64 
   $ kubectl create -f jane.yaml
   ```
@@ -45,7 +47,7 @@ spec:
   ```
 - Approve the request
   ```
-  $ kubectl certificate approve jane
+  $ kubectl certificate approve jane # deny
   ```
 - To view the certificate
   ```
